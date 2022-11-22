@@ -10,6 +10,7 @@ torch = "*"
 transformers = "*"
 timm = "*"
 pandas = "*"
+streamlit = "*"
 
 [dev-packages]
 
