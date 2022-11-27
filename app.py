@@ -1,10 +1,7 @@
-from transformers import DetrFeatureExtractor, DetrForObjectDetection, pipeline, ImageClassificationPipeline
+from transformers import pipeline, ImageClassificationPipeline
 from operator import itemgetter
-import torch
 from PIL import Image
 import PIL
-import requests
-import numpy as np
 import streamlit as st
 
 classify: ImageClassificationPipeline = pipeline('object-detection', model='facebook/detr-resnet-50', feature_extractor='facebook/detr-resnet-50')
@@ -15,7 +12,6 @@ if (uploaded_image is not None):
 	st.caption('Исходное изображение')
 	st.image(image)
 
-	target_sizes = torch.tensor([image.size[::-1]])
 	results = classify(image)
 
 	object_detected = False
