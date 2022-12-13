@@ -9,6 +9,9 @@ torch = "*"
 transformers = "*"
 timm = "*"
 streamlit = "*"
+fastapi = "*"
+uvicorn = "*"
+python-multipart = "*"
 
 [dev-packages]
 jupyter = "*"
